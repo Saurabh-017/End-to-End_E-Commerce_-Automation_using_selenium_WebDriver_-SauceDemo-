@@ -1,0 +1,40 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Project {
+
+	public static void main(String[] args) throws InterruptedException  {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("https://www.saucedemo.com/");
+		driver.findElement(By.xpath("//input[@data-test=\"username\"]")).sendKeys("standard_user");
+		driver.findElement(By.xpath("//input[@data-test=\"password\"]")).sendKeys("secret_sauce");
+		driver.findElement(By.xpath("//input[@value=\"Login\"]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.linkText("Sauce Labs Backpack")).click();
+		driver.findElement(By.xpath("//button[@name=\"add-to-cart\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@data-test=\"back-to-products\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.linkText("Sauce Labs Bolt T-Shirt")).click();
+		driver.findElement(By.xpath("//button[@name=\"add-to-cart\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[@class=\"shopping_cart_link\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@data-test=\"checkout\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@data-test=\"firstName\"]")).sendKeys("Smith");
+		driver.findElement(By.xpath("//input[@data-test=\"lastName\"]")).sendKeys("Patil");
+		driver.findElement(By.xpath("//input[@data-test=\"postalCode\"]")).sendKeys("411028");
+		driver.findElement(By.xpath("//input[@id=\"continue\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@data-test=\"finish\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@id=\"back-to-products\"]")).click();
+		
+		
+		driver.close();
+		
+	}
+}
