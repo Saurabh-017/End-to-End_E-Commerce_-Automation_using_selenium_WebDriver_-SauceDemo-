@@ -13,7 +13,7 @@ The test script performs the following actions:
 4. Proceeds to checkout and fills in customer details.
 5. Completes the purchase and returns to the products page.
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - **Java**
 - **Selenium WebDriver**
